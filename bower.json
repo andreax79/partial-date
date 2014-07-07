@@ -1,0 +1,30 @@
+{
+    "name": "angular-partial-date",
+    "description": "AngularJS partial dates input/format",
+    "keywords": [
+        "angularjs",
+        "javascript",
+        "directive",
+        "date"
+    ],
+    "version": "0.0.1",
+    "main": "dist/partial-date-directive.js",
+    "ignore": [
+        "**/.*",
+        "src",
+        "doc",
+        "examples",
+        "test",
+        "*.md",
+        ".bowerrc",
+        ".gitignore",
+        ".jshintignore",
+        ".jshintrc",
+        "Gruntfile.js",
+        "package.json",
+        "bower.json"
+    ],
+    "dependencies": {
+        "angular": "1.2.x"
+    }
+}

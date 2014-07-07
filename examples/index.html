@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Partial Date Input</title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Angular JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.js"></script>
+        <!-- Bootstrap -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <!-- App -->
+        <script src="../dist/partial-date-directive.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="TestCtrl" style="width: 400px; margin: 0 auto">
+            <h1>Partial Date Input</h1>
+            <div class="row">
+                <input partial-date-input ng-model="model" />
+            </div>
+            <div>
+            Model: {{ model }}<br/>
+            Short date: {{ model | incompleteDate:'shortDate' }}<br/>
+            Medium date: {{ model | incompleteDate:'mediumDate' }}<br/>
+            Long date: {{ model | incompleteDate:'longDate' }}<br/>
+            Full date: {{ model | incompleteDate:'fullDate' }}<br/>
+            </div>
+            <div class="row">
+                <input partial-date-input ng-model="model" ng-disabled="true" />
+            </div>
+        </div>
+    </body>
+</html>
